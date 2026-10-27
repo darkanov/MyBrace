@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MyBrace — ортодонтія в Ковелі</title>
+<meta name="description" content="MyBrace — демонстраційна концепція сайту ортодонтичної стоматології в Ковелі: консультація ортодонта, брекети, елайнери. Вул. Адама Міцкевича, 29. Тел. +380 98 309 90 99.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23253B31'/%3E%3Cpath d='M7 14q9 10 18 0' fill='none' stroke='%23DCE5DB' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F0E9;--sage:#DCE5DB;--ink:#253B31;--ink2:#5E5D56;--card:#fff;--line:#d8d2c4;--btn:#253B31;--on:#fff;--err:#a3261f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#121b16;--sage:#1d2c24;--ink:#eee9de;--ink2:#b2b6ab;--card:#1a2720;--line:#2e4034;--btn:#DCE5DB;--on:#1b2a22;--err:#ff9b93}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Manrope,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:40}
+a{color:inherit}:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.w{max-width:1160px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;letter-spacing:-.02em;text-decoration:none;margin-right:auto}
+nav{display:flex;gap:6px}nav a{text-decoration:none;font-weight:600;font-size:15px;padding:10px 14px;border-radius:99px}
+nav a:hover,nav a[aria-current]{background:var(--sage)}
+.burger{display:none;width:48px;height:48px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;font:inherit;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:2px solid var(--btn);border-radius:99px;padding:12px 26px;font:600 16px Manrope,sans-serif;background:var(--btn);color:var(--on);text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px var(--ink)}
+.btn.o{background:transparent;color:var(--ink)}.btn.o:hover{background:var(--sage)}
+.btn[disabled]{opacity:.6;cursor:wait;transform:none;box-shadow:none}
+.hero{padding:64px 0 72px}.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;font-weight:600;font-size:14px;color:var(--ink2);margin-bottom:18px}
+h1{font:800 clamp(36px,5.6vw,64px)/1.06 Manrope,sans-serif;letter-spacing:-.03em;margin:0 0 20px;max-width:15ch}
+h2{font:800 clamp(28px,4vw,40px)/1.15 Manrope,sans-serif;letter-spacing:-.025em;margin:0 0 12px}
+h3{font:700 20px/1.3 Manrope,sans-serif;margin:0 0 8px}
+.lead{font-size:18px;color:var(--ink2);max-width:50ch;margin:0 0 28px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.art{background:var(--sage);border-radius:32px;padding:12px;aspect-ratio:1/.9}.art svg{display:block;width:100%;height:100%}
+.tooth{fill:var(--card);stroke:var(--ink);stroke-width:3}
+section{padding:72px 0}section.alt{background:var(--sage)}
+.sub{color:var(--ink2);max-width:58ch;margin:0 0 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:6px;height:100%;transition:transform .2s,box-shadow .2s}
+a.card{text-decoration:none}a.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px var(--ink)}
+.card p{margin:0;color:var(--ink2)}.card .more{margin-top:auto;padding-top:14px;font-weight:700}
+.num{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--sage);font-weight:800;margin-bottom:10px}
+.tag{display:inline-block;font-size:13px;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--sage);margin-bottom:10px;align-self:flex-start}
+.ph{border:2px dashed var(--ink2);background:transparent}
+.ph .face{aspect-ratio:4/3;border-radius:16px;background:var(--sage);display:grid;place-items:center;color:var(--ink2);font-weight:600;margin-bottom:10px;text-align:center;padding:10px}
+details{border-top:1px solid var(--line);padding:18px 0}details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font:700 19px/1.35 Manrope,sans-serif;list-style:none;display:flex;justify-content:space-between;gap:16px;min-height:32px}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";font-size:26px;line-height:1;transition:transform .25s}details[open] summary::after{transform:rotate(45deg)}
+details p{margin:10px 0 0;color:var(--ink2);max-width:62ch}
+.cta{background:var(--ink);color:var(--bg);border-radius:32px;padding:56px 40px}.cta h2{max-width:18ch}.cta p{color:inherit;opacity:.85;max-width:52ch}
+.cta .btn{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.box{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px}
+form{display:grid;gap:16px;color:var(--ink)}.f{display:grid;gap:6px;font-weight:600;font-size:15px}.f small{font-weight:400;color:var(--ink2)}
+input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--ink2);border-radius:14px;padding:12px 14px;min-height:48px;width:100%}
+input[aria-invalid=true]{border-color:var(--err)}
+.er{color:var(--err);font-weight:600;font-size:14px;min-height:0}
+.chk{display:flex;gap:12px;align-items:flex-start;font-size:14px;font-weight:400}.chk input{width:22px;min-height:22px;height:22px;margin-top:2px;flex:none}
+.msg{border-radius:16px;padding:14px 16px;font-weight:600;font-size:15px;background:var(--sage)}.msg:empty{display:none}.msg.err{border:1.5px solid var(--err);color:var(--err);background:transparent}
+.pr{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-top:1px solid var(--line)}.pr span:last-child{color:var(--ink2);text-align:right}
+dl{margin:0}dt{color:var(--ink2);font-size:14px;margin-top:18px}dd{margin:0;font-weight:700;font-size:20px}dd a{text-decoration:none}
+.page{padding:56px 0 24px}.page h1{max-width:20ch;font-size:clamp(32px,5vw,52px)}
+.svc{padding:32px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1.3fr;gap:32px}
+.svc h4{margin:14px 0 4px;font-size:14px;color:var(--ink2)}.svc p{margin:0}
+footer{padding:40px 0 100px;border-top:1px solid var(--line);color:var(--ink2);font-size:14px}
+footer .w{display:flex;justify-content:space-between;gap:16px 40px;flex-wrap:wrap}footer a{margin-right:14px}
+.call{display:none}
+@media(max-width:860px){
+.hero{padding:36px 0 48px}.hero .w,.cols,.svc{grid-template-columns:1fr;gap:28px}.art{aspect-ratio:1/.8}
+section{padding:52px 0}.cta{padding:36px 24px;border-radius:26px}.page{padding-top:36px}.box{padding:22px}
+.burger{display:block}.bar>.btn{display:none}
+nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;padding:10px 22px 18px}
+nav.open{display:flex}nav a{padding:14px;font-size:17px}
+.call{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:14px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30}
+.call .btn{background:var(--bg);color:var(--ink);box-shadow:0 8px 24px -10px #0006}.call .btn+.btn{background:var(--btn);color:var(--on)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<header><div class="w bar">
+<a class="logo" href="#home" aria-label="MyBrace — на головну"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M7 14q9 10 18 0" fill="none" stroke="var(--bg)" stroke-width="3" stroke-linecap="round"/></svg>MyBrace</a>
+<nav id="nav" aria-label="Основна навігація"></nav>
+<a class="btn" href="#zapys">Записатися на консультацію</a>
+<button class="burger" id="bg" aria-expanded="false" aria-controls="nav" aria-label="Меню">☰</button></div></header>
+<main id="app" tabindex="-1"></main>
+<footer><div class="w"><div><b style="color:var(--ink)">MyBrace</b><br>Демонстраційна концепція сайту. Дані клініки потребують підтвердження власником.<br>Є протипоказання. Потрібна консультація фахівця.</div>
+<div>вул. Адама Міцкевича, 29, м. Ковель<br><a href="tel:+380983099099">+380 98 309 90 99</a><br><a href="#privacy">Політика конфіденційності</a></div></div></footer>
+<div class="call"><a class="btn" href="tel:+380983099099">Зателефонувати</a><a class="btn" href="#zapys">Записатися</a></div>
+<script>
+const PHONE='+380983099099',PHONE_T='+380 98 309 90 99',ADDR='вул. Адама Міцкевича, 29, м. Ковель',ENDPOINT='';
+const NAV=[['home','Головна'],['services','Послуги'],['team','Команда'],['prices','Ціни'],['contacts','Контакти']];
+const S=[
+{n:'Брекет-системи',d:'Незнімна апаратура для вирівнювання зубів і корекції прикусу. Тип системи обирають разом з ортодонтом після огляду.',who:'Тим, хто хоче обговорити виправлення положення зубів чи прикусу.',ask:'Які типи систем можливі у вашому випадку, як проходять візити та догляд.'},
+{n:'Прозорі елайнери',d:'Знімні прозорі капи, що поступово змінюють положення зубів. Підходять не в усіх випадках — це визначає лікар.',who:'Тим, кого цікавить менш помітна альтернатива.',ask:'Чи підходять елайнери вам, як їх носити та які є обмеження.'},
+{n:'Консультація ортодонта',d:'Перша розмова: лікар оцінює ситуацію, відповідає на запитання й пояснює можливі наступні кроки.',who:'Тим, хто ще не обрав систему й хоче розібратися у варіантах.',ask:'Які обстеження потрібні, чи є альтернативи та з чого почати.'},
+{n:'Діагностика та планування',d:'Обстеження, які лікар може призначити, щоб скласти індивідуальний план лікування.',who:'Пацієнтам, яким лікар рекомендує додаткове уточнення ситуації.',ask:'Які саме обстеження потрібні та навіщо.'}];
+const P=[['Консультації',['Первинна консультація ортодонта']],['Брекет-системи',['Встановлення брекет-системи','Супровід лікування']],['Елайнери',['Планування та виготовлення','Супровід лікування']],['Діагностика',['Діагностичні обстеження']]];
+const D=[1,2,3];
+const FAQ=[['Чим відрізняються брекети та елайнери?','Брекети фіксуються на зубах, елайнери — знімні прозорі капи. Що підходить саме вам, визначає ортодонт після огляду.'],['Як починається ортодонтичне лікування?','З консультації: лікар оцінює ситуацію, за потреби призначає діагностику, потім обговорює можливі варіанти.'],['Від чого залежить вартість?','Від обраного методу, складності випадку та обсягу діагностики. Остаточну суму визначають після консультації.'],['Як записатися на консультацію?','Залиште заявку у формі або зателефонуйте за номером '+PHONE_T+'.'],['Чи можна почати з консультації без вибору системи?','Так, на консультації лікар допоможе розібратися у варіантах. Порядок прийому клініка підтверджує окремо.']];
+const T={home:'MyBrace — ортодонтія в Ковелі',services:'Послуги — MyBrace',team:'Команда — MyBrace',prices:'Ціни — MyBrace',contacts:'Контакти — MyBrace',privacy:'Політика конфіденційності — MyBrace',nf:'Сторінку не знайдено — MyBrace'};
+const fh=id=>`<form id="${id}" class="box" novalidate aria-label="Запис на консультацію"><h3>Запис на консультацію</h3>
+<label class="f">Ім’я *<input name="n" autocomplete="name" required aria-describedby="${id}-en"><span class="er" id="${id}-en"></span></label>
+<label class="f">Телефон *<input name="p" type="tel" autocomplete="tel" inputmode="tel" placeholder="+380 __ ___ __ __" required aria-describedby="${id}-ep"><span class="er" id="${id}-ep"></span></label>
+<label class="f">Бажана послуга <small>необов’язково</small><select name="s"><option value="">Ще не обрано</option>${S.map(x=>`<option>${x.n}</option>`).join('')}</select></label>
+<label class="f">Зручний час для зв’язку <small>необов’язково</small><input name="t" placeholder="Наприклад, після 16:00"></label>
+<label class="chk"><input type="checkbox" name="c" aria-describedby="${id}-ec"><span>Погоджуюся на обробку персональних даних для зв’язку зі мною. <a href="#privacy">Політика конфіденційності</a></span></label><span class="er" id="${id}-ec"></span>
+<button class="btn" type="submit">Надіслати заявку</button><div class="msg" role="status" aria-live="polite"></div></form>`;
+const cta=()=>`<div class="cta"><h2>Почніть із розмови з ортодонтом</h2><p>Залиште ім’я та телефон — із вами зв’яжуться, щоб узгодити консультацію.</p><a class="btn" href="#zapys">Залишити заявку</a></div>`;
+const V={
+home:()=>`<div class="hero"><div class="w"><div><span class="eyebrow">Ортодонтія · Ковель</span><h1>Усмішка, у якій ти впевнений</h1><p class="lead">Ортодонтія з увагою до деталей. Допомагаємо розібратися у варіантах вирівнювання зубів і знайти рішення разом з ортодонтом.</p><div class="row"><a class="btn" href="#zapys">Записатися на консультацію</a><a class="btn o" href="#services">Обрати послугу</a></div></div>
+<div class="art"><svg viewBox="0 0 400 360" role="img" aria-label="Ілюстрація зубної дуги з ортодонтичною дугою"><path d="M60 270Q200 40 340 270" fill="none" stroke="var(--ink)" stroke-width="3" opacity=".35"/>
+<g class="tooth"><rect x="32" y="215" width="52" height="66" rx="20" transform="rotate(-38 58 248)"/><rect x="104" y="150" width="54" height="68" rx="20" transform="rotate(-20 131 184)"/><rect x="174" y="118" width="54" height="70" rx="20"/><rect x="242" y="150" width="54" height="68" rx="20" transform="rotate(20 269 184)"/><rect x="316" y="215" width="52" height="66" rx="20" transform="rotate(38 342 248)"/></g>
+<g fill="var(--ink)"><rect x="123" y="176" width="16" height="16" rx="4"/><rect x="193" y="146" width="16" height="16" rx="4"/><rect x="261" y="176" width="16" height="16" rx="4"/></g></svg></div></div></div>
+<section class="alt"><div class="w"><h2>Напрями</h2><p class="sub">Перелік напрямів потребує підтвердження клінікою.</p><div class="grid">${S.map(x=>`<a class="card" href="#services"><h3>${x.n}</h3><p>${x.d}</p><span class="more">Детальніше →</span></a>`).join('')}</div></div></section>
+<section><div class="w"><h2>Зрозумілий шлях до вашої усмішки</h2><p class="sub">Чотири кроки від заявки до індивідуального плану.</p><div class="grid">${['Заявка та узгодження консультації','Консультація та оцінка ситуації лікарем','Обговорення можливих варіантів лікування','Індивідуальний план після необхідної діагностики'].map((x,i)=>`<div class="card"><span class="num">${i+1}</span><h3>${x}</h3></div>`).join('')}</div></div></section>
+<section class="alt"><div class="w"><h2>Чому MyBrace</h2><p class="sub">Тут з’являться підтверджені переваги клініки: обладнання, підхід до комунікації, команда.</p><div class="card ph"><span class="tag">Потребує даних від клініки</span><p>Цифри, нагороди, стаж і відгуки не вигадуємо — додамо лише перевірені факти.</p></div></div></section>
+<section><div class="w grid"><a class="card" href="#team"><h3>Команда</h3><p>Профілі лікарів з’являться після отримання даних від клініки.</p><span class="more">До команди →</span></a><a class="card" href="#prices"><h3>Ціни</h3><p>Вартість уточнюється у клініки. Остаточну суму визначають після консультації.</p><span class="more">До цін →</span></a></div></section>
+<section class="alt"><div class="w"><h2>Поширені запитання</h2><div style="margin-top:28px">${FAQ.map(x=>`<details><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}</div></div></section>
+<section id="bk"><div class="w cols">${cta()}${fh('fh')}</div></section>`,
+services:()=>`<div class="w page"><h1>Ортодонтія, яка починається з консультації</h1><p class="lead">Наявність послуг у MyBrace клініка підтверджує окремо. Тривалість і результат лікування визначає лікар індивідуально.</p>${S.map(x=>`<article class="svc"><div><h2 style="font-size:28px">${x.n}</h2><p class="sub" style="margin:0">${x.d}</p></div><div><h4>Кому може бути актуально</h4><p>${x.who}</p><h4>Що уточнити у лікаря</h4><p>${x.ask}</p><h4>Вартість</h4><p>Вартість уточнюється</p><p style="margin-top:18px"><a class="btn" href="#zapys">Записатися на консультацію</a></p></div></article>`).join('')}<p class="sub" style="margin-top:20px">Інші ортодонтичні послуги з’являться тут після підтвердження клінікою.</p></div>`,
+team:()=>`<div class="w page"><h1>Команда MyBrace</h1><p class="lead">Імена, фото, освіта та кваліфікація лікарів будуть додані після отримання даних від клініки.</p><div class="grid">${D.map(()=>`<div class="card ph"><div class="face">Фото та інформацію буде додано</div><h3>Ім’я лікаря</h3><p>Спеціалізація, освіта та коротка біографія — після підтвердження.</p></div>`).join('')}</div><p style="margin-top:36px"><a class="btn" href="#zapys">Записатися на консультацію</a></p></div>`,
+prices:()=>`<div class="w page"><h1>Ціни</h1><p class="lead">Індивідуальний план і остаточна вартість визначаються після консультації та діагностики. Суми додамо після отримання прайсу.</p><div class="grid" style="margin-top:28px">${P.map(g=>`<div class="card"><h3>${g[0]}</h3>${g[1].map(i=>`<div class="pr"><span>${i}</span><span>Вартість уточнюється</span></div>`).join('')}</div>`).join('')}</div><p style="margin-top:36px"><a class="btn" href="#zapys">Дізнатися вартість на консультації</a></p></div>`,
+contacts:()=>`<div class="w page"><h1>Контакти</h1><div class="cols" style="margin-top:28px"><div class="box"><dl><dt>Адреса</dt><dd>${ADDR}</dd><dt>Телефон</dt><dd><a href="tel:${PHONE}">${PHONE_T}</a></dd><dt>Години роботи</dt><dd>Уточнюйте за телефоном</dd></dl><p style="margin:24px 0 0"><a class="btn o" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDR)}" target="_blank" rel="noopener">Відкрити пошук на мапі</a></p><p class="sub" style="margin:14px 0 0;font-size:14px">Інтерактивну карту підключимо після підтвердження адреси.</p></div>${fh('fc')}</div></div>`,
+privacy:()=>`<div class="w page"><h1>Політика конфіденційності</h1><p class="lead">Повний текст буде надано власником клініки. У формі збираються лише ім’я, телефон і за бажанням послуга та зручний час — для зв’язку щодо консультації.</p></div>`,
+nf:()=>`<div class="w page"><h1>Сторінку не знайдено</h1><p class="lead">Перевірте адресу або поверніться на головну.</p><a class="btn" href="#home">На головну</a></div>`};
+const app=document.getElementById('app'),nav=document.getElementById('nav'),bg=document.getElementById('bg');let cur='';
+function route(){const h=location.hash.slice(1)||'home',k=h==='zapys'?'home':(V[h]&&h!=='nf'?h:'nf');
+if(k!==cur){app.innerHTML=V[k]();cur=k;document.title=T[k];nav.innerHTML=NAV.map(a=>`<a href="#${a[0]}"${a[0]===k?' aria-current="page"':''}>${a[1]}</a>`).join('');}
+nav.classList.remove('open');bg.setAttribute('aria-expanded','false');
+if(h==='zapys'){const f=document.getElementById('bk');f&&f.scrollIntoView();const i=document.querySelector('#fh input');i&&i.focus({preventScroll:true})}else{window.scrollTo(0,0);app.focus({preventScroll:true})}}
+addEventListener('hashchange',route);route();
+bg.onclick=()=>bg.setAttribute('aria-expanded',nav.classList.toggle('open'));
+const ph=v=>{let d=v.replace(/\D/g,'');if(d.startsWith('380'))d=d.slice(3);else if(d.startsWith('0'))d=d.slice(1);return /^\d{9}$/.test(d)?'+380'+d:null};
+document.addEventListener('submit',async e=>{const f=e.target;if(!f.matches('form.box'))return;e.preventDefault();
+const id=f.id,q=n=>f.elements[n],set=(n,t)=>{document.getElementById(id+'-e'+n).textContent=t||'';const el=n==='c'?q('c'):q(n==='n'?'n':'p');el.setAttribute('aria-invalid',t?'true':'false')},m=f.querySelector('.msg'),b=f.querySelector('button');
+m.className='msg';m.textContent='';
+const name=q('n').value.trim(),tel=ph(q('p').value),ok=q('c').checked;
+set('n',name.length<2?'Вкажіть ім’я.':'');set('p',tel?'':'Вкажіть український номер, наприклад +380 98 309 90 99.');set('c',ok?'':'Потрібна згода на обробку даних.');
+if(name.length<2||!tel||!ok){f.querySelector('[aria-invalid=true]').focus();return}
+if(!ENDPOINT){m.className='msg err';m.textContent='Надсилання заявок ще не підключено, тому дані не відправлено. Зателефонуйте: '+PHONE_T+'.';return}
+b.disabled=true;b.textContent='Надсилаємо…';
+try{const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,phone:tel,service:q('s').value,time:q('t').value.trim()})});
+if(!r.ok)throw 0;m.textContent='Заявку надіслано. З вами зв’яжуться для узгодження консультації.';f.reset()}
+catch(_){m.className='msg err';m.textContent='Не вдалося надіслати заявку. Спробуйте ще раз або зателефонуйте: '+PHONE_T+'.'}
+b.disabled=false;b.textContent='Надіслати заявку'});
+</script></body></html>
